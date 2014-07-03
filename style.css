@@ -1,0 +1,24 @@
+body{
+	background-color: gray;
+	color:black;
+}
+h1{
+	font-size: 50px;
+	text-align:center;
+	font-family: 'Diplomata', cursive;
+}
+#addBox{
+	border-style: solid;
+	border-width:1px;
+	height: 300px;
+}
+.two{
+	font-size: 75px;
+}
+#screen{
+	color:black;
+	background-color: white;
+	border-style: solid;
+	border-width:5px;
+	height: 300px;
+}

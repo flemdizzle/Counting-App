@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>one2onehundred</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+
+</head>
+<body>
+	<h1>one<span class="two">2</span>onehundred</h1>
+	<div id="addBox">
+		<p>Printout</p>
+		<br><input class="shout" type='text'>
+		<p>Multiple Of</p>
+		<br><input class="mod" type='text'>
+		<button id="add">+</button>
+	</div>
+	<br><button id="go">Go!</button>
+	<div id="screen"><div>
+<script>
+$("#add").click(function(){
+//how to add more inputs and more if statements?
+	$("#addBox").append(
+		'<p>Printout</p>
+		<br><input class="shout" type='text'>' +
+		'<p>Multiple Of</p>
+		<br><input class="mod" type='text'>'
+	);
+})
+
+//go button runs counting function
+$("#go").click(function(){
+	for(i=0;i<101;i++){
+	$("#screen").text(i);
+	};
+});
+</script>
+</body>
+</html>
