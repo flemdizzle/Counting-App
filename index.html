@@ -9,26 +9,29 @@
 </head>
 <body>
 	<h1>one<span class="two">2</span>onehundred</h1>
-	<div id="addBox">
+	<div id="box">
 		<p>Printout</p>
 		<br><input class="shout" type='text'>
 		<p>Multiple Of</p>
 		<br><input class="mod" type='text'>
-		<button id="add">+</button>
 	</div>
-	<br><button id="go">Go!</button>
+		<button id="sub">-</button>
+		<button id="add">+</button>
+	<br>
+	<button id="go">Go!</button>
 	<div id="screen"><div>
-<script>
-$("#add").click(function(){
-//how to add more inputs and more if statements?
-	$("#addBox").append(
-		'<p>Printout</p>
-		<br><input class="shout" type='text'>' +
-		'<p>Multiple Of</p>
-		<br><input class="mod" type='text'>'
-	);
-})
 
+<script>
+//adds an input box
+$('#add').click(function(){
+  	$('.shout').after('<input id="newShout">');
+  	$('.mod').after('<input id="newMod">');
+});
+//subtracts that input box
+$('#sub').click(function(){
+	$('#newShout').remove();
+	$('#newMod').remove();
+});
 //go button runs counting function
 $("#go").click(function(){
 	for(i=0;i<101;i++){
