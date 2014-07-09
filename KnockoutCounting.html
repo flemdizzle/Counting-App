@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counting App</title>
+	<script src= "http://knockoutjs.com/downloads/knockout-3.1.0.js" type="text/javascript"></script>
+</head>
+<body>
+<h2>Counting Application</h2>
+<!--Input display-->
+<!--Input-->
+<div data-bind="foreach: box">
+<input data-bind="value: statement"/>
+<input data-bind="value: mod"/>
+<a href="#" data-bind="click: $root.removeInput"></a>
+<br>
+</div>
+<br>
+<!--Button to add more inputs-->
+<button data-bind="click: addInput">Add Inputs</button>
+                   
+<script type="text/javascript">
+function InputFunction(statement, mod){
+	var self=this;
+	self.statement=statement;
+	self.mod=mod;
+};
+
+function ViewModel(){
+	var self=this;
+//Editable Data?
+	self.box=ko.observableArray([
+		new InputFunction("test","modtest")
+
+		]);
+// should add new input box
+	self.addInput=function(){
+		self.box.push(new InputFunction("new","modnew"));
+	};
+	self.removeInput=function(){
+		
+	}
+};
+
+//activates knockout.js
+ko.applyBindings(new ViewModel());
+
+</script>
+</body>
+</html>

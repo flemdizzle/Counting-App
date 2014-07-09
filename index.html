@@ -5,24 +5,26 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+	<script src="http://knockoutjs.com/downloads/knockout-3.1.0.js"></script>
 
 </head>
 <body>
 	<h1>one<span class="two">2</span>onehundred</h1>
-	<div id="box">
-		<p>Printout</p>
-		<br><input class="shout" type='text'>
-		<p>Multiple Of</p>
-		<br><input class="mod" type='text'>
-	</div>
+		<br><input placeholder="Printout..." class="shout" type='text'>
+		<input placeholder="Multiple of..." class="mod" type='text'>
 		<button id="sub">-</button>
 		<button id="add">+</button>
 	<br>
 	<button id="go">Go!</button>
 	<div id="screen"><div>
 
+
+
 <script>
-//adds an input box
+
+
+
+//adds an input box (Need to limit to 5 additional boxes)
 $('#add').click(function(){
   	$('.shout').after('<input id="newShout">');
   	$('.mod').after('<input id="newMod">');
